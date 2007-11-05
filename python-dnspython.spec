@@ -1,6 +1,6 @@
 Name:		python-dnspython
 Version:	1.5.0
-Release:	%mkrel 1
+Release:	%mkrel 2
 Source0:	http://www.dnspython.org/kits/%{version}/dnspython-%{version}.tar.gz
 Source1:	http://www.dnspython.org/kits/%{version}/dnspython-%{version}.tar.gz.asc
 License:	MIT
@@ -8,6 +8,7 @@ URL:		http://www.dnspython.org/
 Summary:	DNS toolkit for Python
 Group:		System/Libraries
 BuildArch:	noarch
+Provides:	dnspython = %{version}-%{release}
 %description
 dnspython is a DNS toolkit for Python. It supports almost all record
 types. It can be used for queries, zone transfers, and dynamic updates.
