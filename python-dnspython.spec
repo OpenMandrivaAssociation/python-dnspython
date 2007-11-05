@@ -9,6 +9,8 @@ Summary:	DNS toolkit for Python
 Group:		System/Libraries
 BuildArch:	noarch
 Provides:	dnspython = %{version}-%{release}
+BuildRequires:	python
+Requires:	python
 %description
 dnspython is a DNS toolkit for Python. It supports almost all record
 types. It can be used for queries, zone transfers, and dynamic updates.
