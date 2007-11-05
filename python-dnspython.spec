@@ -35,5 +35,5 @@ of DNS zones, messages, names, and records.
 
 %files
 %doc LICENSE ChangeLog README PKG-INFO TODO examples
-%{py_platsitedir}/dns/*
-%{py_platsitedir}/dnspython-%{version}-*
+%{py_puresitedir}/dns/*
+%{py_puresitedir}/dnspython-%{version}-*
