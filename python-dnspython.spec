@@ -9,7 +9,7 @@ Summary:	DNS toolkit for Python
 Group:		System/Libraries
 BuildArch:	noarch
 Provides:	dnspython = %{version}-%{release}
-BuildRequires:	python
+BuildRequires:	python-devel
 Requires:	python
 %description
 dnspython is a DNS toolkit for Python. It supports almost all record
