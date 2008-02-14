@@ -7,6 +7,7 @@ License:	MIT
 URL:		http://www.dnspython.org/
 Summary:	DNS toolkit for Python
 Group:		System/Libraries
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 Provides:	dnspython = %{version}-%{release}
 BuildRequires:	python-devel
