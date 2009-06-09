@@ -1,6 +1,6 @@
 Name:		python-dnspython
-Version:	1.5.0
-Release:	%mkrel 6
+Version:	1.6.0
+Release:	%mkrel 1
 Source0:	http://www.dnspython.org/kits/%{version}/dnspython-%{version}.tar.gz
 Source1:	http://www.dnspython.org/kits/%{version}/dnspython-%{version}.tar.gz.asc
 License:	MIT
