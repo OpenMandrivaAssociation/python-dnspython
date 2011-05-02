@@ -1,5 +1,5 @@
 Name:		python-dnspython
-Version:	1.9.2
+Version:	1.9.4
 Release:	%mkrel 1
 Source0:	http://www.dnspython.org/kits/%{version}/dnspython-%{version}.tar.gz
 Source1:	http://www.dnspython.org/kits/%{version}/dnspython-%{version}.tar.gz.asc
