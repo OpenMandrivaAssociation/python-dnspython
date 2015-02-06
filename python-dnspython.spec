@@ -6,7 +6,7 @@
 
 Name:          python-dnspython
 Version:       1.11.1
-Release:       2
+Release:       3
 Source0:       http://www.dnspython.org/kits/%{version}/dnspython-%{version}.tar.gz
 Source1:       http://www.dnspython.org/kits/%{version}/dnspython-%{version}.tar.gz.asc
 Source2:       http://www.dnspython.org/kits3/%{version}/dnspython3-%{version}.tar.gz
