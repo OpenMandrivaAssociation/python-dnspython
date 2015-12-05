@@ -1,7 +1,9 @@
 removed_sources:
-  dnspython-1.9.4.tar.gz: 41d00d0f81bc9aba02c5c62e1d4a8ee57810410e
-sources:
   dnspython-1.11.1.tar.gz: d86d1eb6eb28c8ebaea38b4e72e11c800eb04514
-  dnspython-1.11.1.tar.gz.asc: 30616fefe0e39db1fc9a1d60e7ecdd4aedd48fd4
+  dnspython-1.9.4.tar.gz: 41d00d0f81bc9aba02c5c62e1d4a8ee57810410e
   dnspython3-1.11.1.tar.gz: a9b0326ae27b03bf28ba9cff4fa50a108c87c39d
-  dnspython3-1.11.1.tar.gz.asc: fdb14a078b24617ed18fe71527f00df5e2b7c783
+sources:
+  dnspython-1.12.0.tar.gz: 371c68b83fd2a06c6492b024acc1684fc150e1f3
+  dnspython-1.12.0.tar.gz.asc: 272525aa365af476a0054896cc40aa47d455232f
+  dnspython3-1.12.0.tar.gz: daaad12af6b2f9cf78e6eb7c5d2079d225c88224
+  dnspython3-1.12.0.tar.gz.asc: a4a1b18d7a17c2476da0f4c0d1254abccc8c2161

@@ -4,9 +4,9 @@
 %define py3dir %{_builddir}/dnspython/dnspython3-%{version}
 %define py3unpack -a 2
 
-Name:          python-dnspython
-Version:       1.11.1
-Release:       3
+Name:          python2-dnspython
+Version:       1.12.0
+Release:       1
 Source0:       http://www.dnspython.org/kits/%{version}/dnspython-%{version}.tar.gz
 Source1:       http://www.dnspython.org/kits/%{version}/dnspython-%{version}.tar.gz.asc
 Source2:       http://www.dnspython.org/kits3/%{version}/dnspython3-%{version}.tar.gz
@@ -17,8 +17,8 @@ Summary:       DNS toolkit for Python
 Group:         Development/Python
 BuildArch:     noarch
 Provides:      dnspython = %{version}-%{release}
-BuildRequires: pkgconfig(python)
-
+BuildRequires: pkgconfig(python2)
+%rename 	python-dnspython
 
 %description
 dnspython is a DNS toolkit for Python. It supports almost all record
@@ -30,15 +30,15 @@ classes perform queries for data of a given name, type, and class, and
 return an answer set. The low level classes allow direct manipulation
 of DNS zones, messages, names, and records.
 
-%package -n python3-dnspython3
+%package -n python-dnspython3
 Summary:       DNS toolkit for Python 3
 Group:         Development/Python
 Provides:      dnspython3 = %{version}-%{release}
-
+%rename 	python3-dnspython3
 BuildRequires: pkgconfig(python3)
 
 
-%description -n python3-dnspython3
+%description -n python-dnspython3
 dnspython3 is a DNS toolkit for Python 3. It supports almost all
 record types. It can be used for queries, zone transfers, and dynamic
 updates. It supports TSIG authenticated messages and EDNS0.
@@ -60,7 +60,7 @@ find %{py3dir}/examples -type f | xargs chmod a-x
 
 %build
 pushd %{py2dir}
-python setup.py build
+python2 setup.py build
 popd
 
 pushd %{py3dir}
@@ -69,7 +69,7 @@ popd
 
 %install
 pushd %{py2dir}
-python setup.py install --skip-build --root %{buildroot}
+python2 setup.py install --skip-build --root %{buildroot}
 popd
 
 pushd %{py3dir}
@@ -83,7 +83,7 @@ for py in *.py
 do
   if [ $py != resolver.py ]
   then
-    PYTHONPATH=%{buildroot}%{py_puresitedir} %{__python} $py
+    PYTHONPATH=%{buildroot}%{py2_puresitedir} %{__python2} $py
   fi
 done
 popd
@@ -101,10 +101,10 @@ popd
 
 %files
 %doc dnspython-%{version}/{ChangeLog,LICENSE,README,examples}
-%{py_puresitedir}/*egg-info
-%{py_puresitedir}/dns
+%{py2_puresitedir}/*egg-info
+%{py2_puresitedir}/dns
 
-%files -n python3-dnspython3
+%files -n python-dnspython3
 %doc dnspython3-%{version}/{ChangeLog,LICENSE,README,examples}
 %{py3_puresitedir}/*egg-info
 %{py3_puresitedir}/dns
