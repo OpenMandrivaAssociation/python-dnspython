@@ -16,6 +16,7 @@ BuildArch:     noarch
 Provides:      dnspython = %{EVRD}
 Provides:      dnspython3 = %{EVRD}
 BuildRequires: pkgconfig(python3)
+BuildRequires: python-setuptools
 %rename python3-dnspython3
 %rename python-dnspython3
 
@@ -33,6 +34,7 @@ of DNS zones, messages, names, and records.
 Summary:       DNS toolkit for Python 2
 Group:         Development/Python
 BuildRequires: pkgconfig(python2)
+BuildRequires: python2-setuptools
 # For %%check
 BuildRequires: python2dist(typing)
 
